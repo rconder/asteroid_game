@@ -34,6 +34,9 @@ def main():
             if not player.is_collide(item):
                 print("Game Over") 
                 raise SystemExit("You Lose")
+            for shot in shots:
+                if not shot.is_collide(item):
+                    item.kill()
         pygame.display.flip()
 
 if __name__ == "__main__":
